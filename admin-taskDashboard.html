@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders Management</title>
+  <link rel="stylesheet" href="admin-taskDashboard.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon"><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="admin-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="employee.html" class="menu-link">Employees</a></li>
+      <li><a href="customers.html" class="menu-link">Customers</a></li>
+      <li><a href="inventory.html" class="menu-link">Inventory</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Orders Management Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Orders Management</h2>
+
+      <section class="dashboard-section">
+        <h3>Assign Orders</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Project Type</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Assign Project To</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="pending-orders">
+              <!-- Data filled by admin-taskDashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin-taskDashboard.js" type="module"></script>
+</body>
+</html>

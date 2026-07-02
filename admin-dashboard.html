@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon"><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="admin-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="employee.html" class="menu-link">Employees</a></li>
+      <li><a href="customers.html" class="menu-link">Customers</a></li>
+      <li><a href="inventory.html" class="menu-link">Inventory</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Dashboard Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Dashboard Overview</h2>
+      
+      <!-- Review Submission Notice -->
+      <div class="review-notice" id="review-notice">
+        <div class="review-notice-icon">📝</div>
+        <div class="review-notice-content">
+          <strong>Review Submissions</strong>
+          <p>Some orders are submitted for review without payment. These require your approval before proceeding.</p>
+        </div>
+      </div>
+
+      <!-- Pending Orders Section -->
+      <section class="dashboard-section">
+        <h3>Pending Orders <span class="order-count-badge">0</span></h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Project Type</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="pending-orders">
+              <!-- Data filled by admin-dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Inventory Status Section -->
+      <section class="dashboard-section">
+        <h3>Inventory Status <span class="inventory-count-badge">0 low</span></h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-status">
+              <!-- Data filled by admin-dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin-dashboard.js" type="module"></script>
+</body>
+</html>

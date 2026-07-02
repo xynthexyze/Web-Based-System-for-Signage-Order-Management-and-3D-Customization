@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History</title>
+  <link rel="stylesheet" href="admin-history.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon"><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="admin-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="employee.html" class="menu-link">Employees</a></li>
+      <li><a href="customers.html" class="menu-link">Customers</a></li>
+      <li><a href="inventory.html" class="menu-link">Inventory</a></li>
+      <li><a href="admin-history.html" class="menu-link active">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Order History</h2>
+
+      <section class="dashboard-section">
+        <h3>Completed Orders</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Finished Product</th>
+                <th>Project Type</th>
+                <th>Customer</th>
+                <th>Date Accomplished</th>
+              </tr>
+            </thead>
+            <tbody id="order-history">
+              <!-- Data filled by admin-history.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin-history.js" type="module"></script>
+</body>
+</html>

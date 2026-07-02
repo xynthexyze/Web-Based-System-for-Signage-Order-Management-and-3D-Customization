@@ -1,0 +1,374 @@
+/* index.css - Enhanced Homepage Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.logo-img {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    height: 140px;
+    z-index: 100;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Enhanced Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Added for Firefox support */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Added for better alignment */
+    gap: 8px;
+    min-width: 160px; /* Added minimum width */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #e6395f, #e84325);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-alt {
+    background: transparent;
+    border: 2px solid #fff;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-alt:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Quick Links */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-top: 1px solid #dee2e6;
+}
+
+.quick-links a {
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+    text-align: center; /* Added for better text alignment */
+    min-width: 120px; /* Added minimum width */
+}
+
+.quick-links a:hover {
+    background: #f20000;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+}
+
+/* Navigation Styles - Fixed missing navigation container */
+.nav-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Enhanced Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    font-family: inherit; /* Added for consistency */
+}
+
+.dropbtn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f8f9fa;
+    font-family: inherit; /* Added for consistency */
+}
+
+.dropdown-content a:hover {
+    background: #f20000;
+    color: white;
+    padding-left: 20px;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.hero-content .copyright {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+    color: #e9ecef;
+}
+
+/* Fallback for browsers that don't support gradient text */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+        .hero h1 {
+            background: none;
+            -webkit-text-fill-color: white;
+            color: white;
+        }
+    }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+    
+    .logo-img {
+        height: 100px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .quick-links {
+        padding: 30px 20px;
+        gap: 15px;
+    }
+    
+    .quick-links a {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 100px;
+    }
+    
+    .nav-container {
+        padding: 15px 20px;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .dropdown-content {
+        min-width: 160px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-links a {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .logo-img {
+        height: 80px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for potential scrollbar issues */
+html {
+    overflow-y: scroll;
+}
+
+/* Smooth scrolling for older browsers */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .hero-content {
+        animation: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        animation: none;
+    }
+}

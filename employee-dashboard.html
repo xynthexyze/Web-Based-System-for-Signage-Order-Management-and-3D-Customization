@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard - V.A. Erni's</title>
+  <link rel="stylesheet" href="employee-dashboard.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="employee-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon">
+          View Profile
+        </a>
+      </li>
+      <li><a href="employee-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="employee-history.html" class="menu-link">Order History</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Dashboard Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Production Dashboard</h2>
+
+      <!-- Pending Orders Section -->
+      <section class="dashboard-section">
+        <h3>Orders Ready for Production</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Project Type</th>
+                <th>Customer</th>
+                <th>Quantity</th>
+                <th>Confirmed Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="pending-orders">
+              <!-- Filled by employee-dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Inventory Status Section -->
+      <section class="dashboard-section">
+        <h3>Inventory Status</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-status">
+              <!-- Filled by employee-dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="employee-dashboard.js" type="module"></script>
+</body>
+</html>

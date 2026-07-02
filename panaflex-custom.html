@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panaflex Signage Customization</title>
+  <link rel="stylesheet" href="panaflex-custom.css" />
+  <!-- PayPal SDK with proper parameters -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AY9vrhgnoRfRoo2iTb-RRs6dLnvDeAB5NsBWtKFLHLrrgrddSRlEoGIxvh50VK1I2eNygATTFyqH8xjq&currency=PHP&intent=capture"></script>
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="Customer-Profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html">Dashboard</a></li>
+      <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <div class="customization-container">
+      <h2>Customize your design</h2>
+      
+      <div class="content-wrapper">
+        <div class="viewer-section">
+          <div id="viewer-container"></div>
+        </div>
+        
+        <div class="controls-section">
+          <!-- Shape Customization -->
+          <div class="control-group">
+            <h3>Shape Customization</h3>
+            <div class="button-group">
+              <button id="add-square" class="control-btn">Add Square</button>
+              <button id="add-circle" class="control-btn">Add Circle</button>
+              <button id="clear-scene" class="control-btn">Clear Scene</button>
+            </div>
+            <div style="margin: 10px 0;">
+              <label for="shape-color">Shape Color</label>
+              <input type="color" id="shape-color" value="#f72585" style="margin-left: 10px;">
+            </div>
+          </div>
+
+          <label>Width: <span id="shape-width-value">1</span></label>
+          <input id="shape-width" type="range" min="0.1" max="5" step="0.1" value="1">
+
+          <label>Height: <span id="shape-height-value">1</span></label>
+          <input id="shape-height" type="range" min="0.1" max="5" step="0.1" value="1">
+
+          <!-- Image Customization -->
+          <div class="control-group">
+            <h3>Image Customization</h3>
+            <div class="button-group">
+              <input type="file" id="image-upload" accept="image/*" style="display: none;">
+              <button id="upload-image" class="control-btn">Upload Image</button>
+              <button id="crop-image" class="control-btn">Crop Image</button>
+            </div>
+            <div class="button-group" style="margin-top: 10px;">
+              <button id="delete-image" class="control-btn">Delete Selected</button>
+              <button id="clear-images" class="control-btn">Clear All Images</button>
+            </div>
+            <div style="margin: 15px 0;">
+              <label>Image Width: <span id="image-width-value">1</span></label>
+              <input id="image-width" type="range" min="0.1" max="3" step="0.1" value="1">
+            </div>
+            <div style="margin: 15px 0;">
+              <label>Image Height: <span id="image-height-value">1</span></label>
+              <input id="image-height" type="range" min="0.1" max="3" step="0.1" value="1">
+            </div>
+          </div>
+
+          <!-- Text Customization -->
+          <div class="control-group">
+            <h3>Text Customization</h3>
+            <div class="button-group">
+              <textarea id="text-input" placeholder="Enter text" rows="4" 
+              style="flex: 2; padding: 10px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+              <button id="add-text" class="control-btn">Add Text</button>
+            </div>
+            <!-- ADDED TEXT MANAGEMENT BUTTONS -->
+            <div class="button-group" style="margin-top: 10px;">
+              <button id="delete-text" class="control-btn">Delete Selected</button>
+              <button id="clear-text" class="control-btn">Clear All Text</button>
+            </div>
+            
+            <!-- ADDED FONT SELECTOR -->
+            <div style="margin: 15px 0;">
+              <label for="font-family" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Font Family</label>
+              <select id="font-family" class="font-family-dropdown" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+                <option value="helvetiker" style="font-family: Arial, sans-serif;">Arial</option>
+                <option value="helvetiker" style="font-family: 'Helvetica Neue', sans-serif;">Helvetica</option>
+                <option value="optimer" style="font-family: 'Times New Roman', serif;">Times New Roman</option>
+                <option value="gentilis" style="font-family: Georgia, serif;">Georgia</option>
+                <option value="droid sans" style="font-family: 'Comic Sans MS', cursive;">Comic Sans MS</option>
+                <option value="droid serif" style="font-family: 'Courier New', monospace;">Courier New</option>
+                <option value="opensans" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS</option>
+                <option value="robotothin" style="font-family: Verdana, sans-serif;">Verdana</option>
+              </select>
+            </div>
+            
+            <!-- CHANGED: Font Size Dropdown instead of Slider -->
+            <div style="margin: 15px 0;">
+              <label for="font-size" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Font Size</label>
+              <select id="font-size" class="font-size-dropdown" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+                <option value="8">8 pt</option>
+                <option value="9">9 pt</option>
+                <option value="10">10 pt</option>
+                <option value="11">11 pt</option>
+                <option value="12">12 pt</option>
+                <option value="14">14 pt</option>
+                <option value="16">16 pt</option>
+                <option value="18">18 pt</option>
+                <option value="20">20 pt</option>
+                <option value="24" selected>24 pt</option>
+                <option value="28">28 pt</option>
+                <option value="32">32 pt</option>
+                <option value="36">36 pt</option>
+                <option value="42">42 pt</option>
+                <option value="48">48 pt</option>
+                <option value="56">56 pt</option>
+                <option value="64">64 pt</option>
+                <option value="72">72 pt</option>
+                <option value="84">84 pt</option>
+                <option value="96">96 pt</option>
+                <option value="120">120 pt</option>
+                <option value="144">144 pt</option>
+              </select>
+            </div>
+            <div style="margin: 10px 0;">
+              <label for="font-color">Font Color</label>
+              <input type="color" id="font-color" value="#4cc9f0" style="margin-left: 10px;">
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Text Position</h3>
+
+            <label>X Position</label>
+            <input id="text-pos-x" type="range" min="-2" max="2" step="0.1" value="0">
+
+            <label>Y Position</label>
+            <input id="text-pos-y" type="range" min="0" max="2" step="0.1" value="1">
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="action-section">
+        <button class="action-btn" id="generate-quotation">Generate Quotation</button>
+        <button class="action-btn secondary" id="save-design">Save Design</button>
+        <button class="action-btn secondary" id="reset-design">Reset Design</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/geometries/TextGeometry.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/DragControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/utils/FontLoader.js"></script>
+
+  <!-- Your Custom Script -->
+  <script src="scriptCustomize.js"></script>
+
+  <script>
+    // Add event listener for the upload image button
+    document.addEventListener('DOMContentLoaded', function() {
+      const uploadImageBtn = document.getElementById('upload-image');
+      const imageUploadInput = document.getElementById('image-upload');
+      
+      if (uploadImageBtn && imageUploadInput) {
+        uploadImageBtn.addEventListener('click', function() {
+          imageUploadInput.click();
+        });
+      }
+      
+      // Debug PayPal loading
+      function checkPayPalLoaded() {
+        console.log('Checking PayPal SDK...');
+        if (typeof paypal === 'undefined') {
+          console.warn('PayPal SDK not loaded yet. It may still be loading.');
+          setTimeout(checkPayPalLoaded, 1000);
+        } else {
+          console.log('PayPal SDK loaded successfully!');
+        }
+      }
+      
+      // Check PayPal after page loads
+      setTimeout(checkPayPalLoaded, 2000);
+    });
+  </script>
+</body>
+</html>

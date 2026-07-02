@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarpaulin Quotation - V.A. Erni's</title>
+  <link rel="stylesheet" href="tarp-quotation.css" />
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="customer-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" width="20"/><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link">Order History</a></li>
+      <li><a href="billing.html" class="menu-link">Billing</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section class="add-item">
+      <div class="form-section">
+        <h2>Tarpaulin Signage Quotation</h2>
+        <p class="form-subtitle">Enter dimensions in feet. Minimum order: ₱4,000</p>
+
+        <form id="addItemForm">
+          <div class="form-dimensions">
+            <label><strong>Dimensions (in feet)</strong></label>
+            <div class="form-length-width">
+              <input type="number" id="length" placeholder="Length (feet)" step="0.1" min="0.1" required>
+              <input type="number" id="width" placeholder="Width (feet)" step="0.1" min="0.1" required>
+            </div>
+          </div>
+
+          <input type="number" id="quantity" placeholder="Quantity" min="1" required/>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="withLights" />
+            Includes lights (+₱100 per sq. ft.)
+          </label>
+
+          <button type="submit" class="action-btn">Generate Quotation</button>
+        </form>
+
+        <div class="quotation-output" id="quotationOutput" style="display: none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="tarp-quotation.js"></script>
+</body>
+</html>

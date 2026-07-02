@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Order History - V.A. Erni's</title>
+  <link rel="stylesheet" href="admin-history.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="employee-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+       <li><a href="employee-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="employee-history.html" class="menu-link">Order History</a></li>
+       <li><a href="installer.html" class="menu-link">Installer</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Completed Orders History</h2>
+      <section class="dashboard-section">
+        <h3>Your Completed Work</h3>
+        <div class="table-wrapper">
+          <table class="uniform-table">
+            <thead>
+              <tr>
+                <th>Project Type</th>
+                <th>Customer</th>
+                <th>Dimensions</th>
+                <th>Date Completed</th>
+              </tr>
+            </thead>
+            <tbody id="order-history">
+              <!-- Filled by employee-history.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="employee-history.js" type="module"></script>
+</body>
+</html>

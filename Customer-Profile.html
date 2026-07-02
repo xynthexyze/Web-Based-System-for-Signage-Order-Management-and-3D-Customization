@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="customer-profile.html" class="menu-link active">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link">Order History</a></li>
+      <li><a href="billing.html" class="menu-link">Billing</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="user-profile">
+      <h2>Profile</h2>
+      <div class="profile-box">
+        <img src="profile-icon-black.png" alt="Profile Icon" class="profile-icon" />
+        <div class="profile-info">
+          <p><strong>Name:</strong> <span id="profile-name"></span></p>
+          <p><strong>Address:</strong> <span id="profile-address"></span></p>
+          <p><strong>Contact:</strong> <span id="profile-contact"></span></p>
+          <p><strong>Email:</strong> <span id="profile-email"></span></p>
+          <p><strong>Position:</strong> <span id="profile-role"></span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="cprofile.js"></script>
+</body>
+</html>

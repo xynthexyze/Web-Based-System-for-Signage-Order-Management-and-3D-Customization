@@ -1,0 +1,399 @@
+/* ===== Enhanced Sidebar Menu ===== */
+.menu-tab {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #f20000 0%, #c00000 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+.menu-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-tab li {
+    margin: 0 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-tab li:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+.menu-tab a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-tab a:hover {
+    background: none;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.menu-link.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+}
+
+/* ===== Enhanced Page Layout ===== */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 220px;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(135deg, #333, #555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #444;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* ===== Enhanced Dashboard Box ===== */
+.dashboard-box {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 25px auto;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Enhanced 3D Viewer ===== */
+#viewer-container {
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    margin-top: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 2px solid #f20000;
+}
+
+canvas {
+    display: block;
+    border-radius: 10px;
+}
+
+/* ===== Enhanced Customization Controls ===== */
+.controls {
+    margin-top: 25px;
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.controls label {
+    margin: 0 12px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+input[type="color"],
+input[type="text"] {
+    margin: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+input[type="color"]:focus,
+input[type="text"]:focus {
+    border-color: #f20000;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(242, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+button {
+    padding: 14px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f20000, #c00000);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c00000, #a00000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* ===== Enhanced Action Button ===== */
+.action-btn {
+    margin-top: 25px;
+    padding: 16px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #f20000, #c00000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+}
+
+.action-btn:hover {
+    background: linear-gradient(135deg, #c00000, #a00000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 0, 0, 0.4);
+}
+
+/* ===== Enhanced Form Styling ===== */
+.form-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease-in-out;
+    border: 1px solid #e9ecef;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    color: #333;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section form input,
+.form-section form textarea,
+.form-section form select,
+.form-section form button {
+    padding: 16px 18px;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.form-section form input:focus,
+.form-section form textarea:focus,
+.form-section form select:focus {
+    border-color: #f20000;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(242, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-section form button {
+    background: linear-gradient(135deg, #f20000, #c00000);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+    margin-top: 15px;
+}
+
+.form-section form button:hover {
+    background: linear-gradient(135deg, #c00000, #a00000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(242, 0, 0, 0.4);
+}
+
+.form-section form button:active {
+    transform: translateY(-1px);
+}
+
+.form-section p {
+    text-align: center;
+    margin-top: 22px;
+    color: #555;
+    font-size: 15px;
+}
+
+.form-section a {
+    color: #f20000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+    color: #c00000;
+    text-decoration: underline;
+}
+
+.form-name {
+    display: flex;
+    gap: 15px;
+}
+
+.form-name input {
+    flex: 1;
+}
+
+/* ===== Enhanced Checkbox ===== */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.checkbox-label:hover {
+    color: #f20000;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #f20000;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* ===== Enhanced Dimension Fields ===== */
+.form-dimensions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-length-width {
+    display: flex;
+    gap: 15px;
+}
+
+.form-length-width input {
+    flex: 1;
+}
+
+.radio-inline-group {
+    display: flex;
+    gap: 25px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+}
+
+.radio-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 130px;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.radio-inline:hover {
+    color: #f20000;
+}
+
+.radio-inline input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #f20000;
+    cursor: pointer;
+}

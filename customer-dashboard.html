@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard - V.A. Erni's</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="customer-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link active">Dashboard</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Your Active Orders</h2>
+      <p>Track the status of your signage projects and payments.</p>
+      
+      <!-- Order Filter Tabs -->
+      <div class="order-filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Orders</button>
+        <button class="filter-tab" data-filter="pending">Pending</button>
+        <button class="filter-tab" data-filter="review">Review Submissions</button>
+        <button class="filter-tab" data-filter="completed">Completed</button>
+      </div>
+      
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Order ID & Date</th>
+              <th>Project Type</th>
+              <th>Dimensions</th>
+              <th>Amount</th>
+              <th>Order Status</th>
+              <th>Payment Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="order-table-body">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- No Orders Message -->
+      <div id="no-orders-message" class="no-orders-message" style="display: none;">
+        <div class="no-orders-icon">📭</div>
+        <h3>No Orders Yet</h3>
+        <p>Start by creating your first signage project!</p>
+        <button class="action-btn create-btn" onclick="window.location.href='order-type.html'">
+          Create New Signage Design
+        </button>
+      </div>
+      
+      <!-- Review Submission Info -->
+      <div class="info-box review-info">
+        <div class="info-icon">📝</div>
+        <div class="info-content">
+          <h4>Review Submissions</h4>
+          <p>Orders marked as "Review Submission" have been submitted for admin approval without payment. The admin will review your design and contact you for payment confirmation.</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 30px; text-align: center;">
+        <button class="action-btn" onclick="window.location.href='order-type.html'">
+          Create New Signage Design
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Order Details Modal (will be populated by JS) -->
+  <div id="order-details-modal" class="modal" style="display: none;"></div>
+
+  <script type="module" src="customer-dashboard.js"></script>
+</body>
+</html>

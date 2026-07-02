@@ -1,0 +1,263 @@
+.menu-tab {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #f20000 0%, #c00000 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+.menu-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-tab li {
+    margin: 0 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-tab li:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+.menu-tab a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-tab a:hover {
+    background: none;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.menu-link.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    margin-left: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f9fa;
+    padding: 40px;
+    width: calc(100% - 220px); /* Added to prevent overflow */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 700;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.action-btn {
+    padding: 16px 32px;
+    font-size: 17px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f20000, #c00000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+    margin-top: 25px;
+}
+
+.action-btn:hover {
+    background: linear-gradient(135deg, #c00000, #a00000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 0, 0, 0.4);
+}
+
+.form-section {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.6s ease-in-out;
+    border: 1px solid #e9ecef;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    color: #333;
+    background: linear-gradient(135deg, #333, #555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Added for better browser support */
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-section form input,
+.form-section form textarea,
+.form-section form select,
+.form-section form button {
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.form-section form input:focus,
+.form-section form textarea:focus,
+.form-section form select:focus {
+    border-color: #f20000;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(242, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-section form button {
+    background: linear-gradient(135deg, #f20000, #c00000);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(242, 0, 0, 0.3);
+}
+
+.form-section form button:hover {
+    background: linear-gradient(135deg, #c00000, #a00000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 0, 0, 0.4);
+}
+
+.form-section form button:active {
+    transform: translateY(0); /* Added for better UX */
+}
+
+.form-section p {
+    text-align: center;
+    margin-top: 22px;
+    color: #555;
+    font-size: 15px;
+}
+
+.form-section a {
+    color: #f20000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+    color: #c00000;
+    text-decoration: underline;
+}
+
+.form-name {
+    display: flex;
+    gap: 15px;
+}
+
+.form-name input {
+    flex: 1;
+}
+
+/* Added responsive design */
+@media (max-width: 768px) {
+    .menu-tab {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-section {
+        padding: 30px 25px;
+    }
+    
+    .form-name {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}

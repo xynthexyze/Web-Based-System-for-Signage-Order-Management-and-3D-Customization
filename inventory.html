@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management - V.A. Erni's</title>
+  <link rel="stylesheet" href="inventory.css" />
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li><a href="admin-profile.html"><img src="profile.png" alt="Profile" class="menu-icon" /><br><br>View Profile</a></li>
+      <li><a href="admin-dashboard.html">Dashboard</a></li>
+      <li><a href="employee.html">Employees</a></li>
+      <li><a href="customers.html">Customers</a></li>
+      <li><a href="inventory.html" class="active">Inventory</a></li>
+      <li><a href="admin-history.html">Order History</a></li>
+      <li><a href="create-employee.html">Manage Accounts</a></li>
+      <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section class="form-container">
+      <!-- Add New Item Form -->
+      <div class="form-section">
+        <h2>Add New Material</h2>
+        <form id="addItemForm">
+          <select id="material" required>
+            <option value="">Select Material</option>
+            <option value="Panaflex">Panaflex</option>
+            <option value="Tarpaulin">Tarpaulin</option>
+            <option value="Metal Sheet">Metal Sheet</option>
+            <option value="Acrylic">Acrylic</option>
+            <option value="other">Add New Material</option>
+          </select>
+          <input type="text" id="newMaterialInput" class="new-material-input" placeholder="Enter new material name" style="display: none; margin-top: 10px;" />
+          
+          <input type="number" id="stock" placeholder="Quantity" min="0" required />
+          
+          <select id="unit" required>
+            <option value="">Select Unit</option>
+            <option value="sq. ft.">Square Feet</option>
+            <option value="pcs">Pieces</option>
+            <option value="roll">Roll</option>
+            <option value="new">Add New Unit</option>
+          </select>
+          <input type="text" id="newUnitInput" class="new-unit-input" placeholder="Enter new unit" style="display: none; margin-top: 10px;" />
+          
+          <button type="submit">Add to Inventory</button>
+        </form>
+      </div>
+
+      <!-- Current Inventory -->
+      <section>
+        <div class="dashboard-box">
+          <h2>Current Inventory</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+              <tr>
+                <td colspan="5" style="text-align:center;">Loading inventory...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="./inventory.js"></script>
+</body>
+</html>

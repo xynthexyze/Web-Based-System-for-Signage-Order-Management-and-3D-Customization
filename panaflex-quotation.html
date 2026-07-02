@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotation</title>
+  <link rel="stylesheet" href="panaflex-quotation.css" />
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="Customer-Profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" width="20" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link">Order History</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section class="add-item">
+      <div class="form-section">
+        <h2>Generate Quotation</h2>
+        <p class="form-subtitle">Fill out the form below</p>
+
+        <form id="addItemForm">
+          <div class="form-dimensions">
+            <div class="form-length-width">
+              <input type="number" id="length" placeholder="Length (feet)" required>
+              <input type="number" id="width" placeholder="Width (feet)" required>
+            </div>
+          </div>
+
+          <input type="number" id="quantity" placeholder="Quantity" min="1" required />
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="withLights" /> Includes lights
+          </label>
+
+          <label class="checkbox-label">
+            <input type="radio" name="faceType" value="one" checked />
+            One-faced
+          </label>
+
+          <label class="checkbox-label">
+            <input type="radio" name="faceType" value="two" />
+            Two-faced
+          </label>
+
+          <button type="submit" class="action-btn">Generate</button>
+        </form>
+
+        <div class="quotation-output" id="quotationOutput" style="display: none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="panaflex-quotation.js"></script>
+</body>
+</html>

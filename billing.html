@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billing & Payments - V.A. Erni's</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AY9vrhgnoRfRoo2iTb-RRs6dLnvDeAB5NsBWtKFLHLrrgrddSRlEoGIxvh50VK1I2eNygATTFyqH8xjq&currency=PHP"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <nav class="menu-tab">
+      <ul>
+        <li>
+          <a href="customer-profile.html">
+            <img src="profile.png" alt="Profile" class="menu-icon">
+            View Profile
+          </a>
+        </li>
+        <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+        <li><a href="order-history.html" class="menu-link">Order History</a></li>
+        <li><a href="billing.html" class="menu-link active">Billing & Payments</a></li>
+        <li><a href="index.html" class="menu-link logout">Log out</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="dashboard-box">
+        <div class="payment-tab">
+          <h2>Billing and Payments</h2>
+          <p>Pay for your signage orders securely using PayPal.</p>
+
+          <div id="invoiceSection" style="margin-top:20px;">
+            <h3>Your Pending Invoices</h3>
+            <div id="pendingInvoices">
+              <p>Loading your invoices...</p>
+            </div>
+            <div id="paypal-button-container" style="margin-top:20px;">
+              <p>Select an invoice above to make a payment.</p>
+            </div>
+          </div>
+
+          <hr style="margin:25px 0;">
+
+          <h3>Payment History</h3>
+          <div id="paymentHistory" style="max-height:400px; overflow-y:auto; font-size:14px; padding: 10px;">
+            <p>Loading your payment history...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="billing.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Employee Account</title>
+  <link rel="stylesheet" href="create-employee.css" />
+  <style>
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Role badge styles */
+    .role-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .role-fabricator {
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+    }
+    .role-installer {
+      background: linear-gradient(135deg, #2196F3, #0D47A1);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon" /><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="admin-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="employee.html" class="menu-link">Employees</a></li>
+      <li><a href="customers.html" class="menu-link">Customers</a></li>
+      <li><a href="inventory.html" class="menu-link">Inventory</a></li>
+      <li><a href="admin-history.html" class="menu-link">Order History</a></li>
+      <li><a href="create-employee.html" class="menu-link active">Manage Accounts</a></li>
+      <li><a href="index.html" class="menu-link">Log out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="form-section">
+      <h2>Create Employee Account</h2>
+      <form id="create-employee-form">
+        <div class="form-name">
+          <input type="text" id="first_name" placeholder="First Name" required />
+          <input type="text" id="last_name" placeholder="Last Name" required />
+        </div>
+        
+        <input type="email" id="email" placeholder="Email" required />
+        
+        <div class="form-password">
+          <input type="password" id="password" placeholder="Password" required />
+          <input type="password" id="confirm" placeholder="Confirm Password" required />
+        </div>
+        
+        <input type="text" id="contact" placeholder="Phone Number" required />
+        <input type="text" id="address" placeholder="Address" required />
+        
+        <select id="employeeRole" required>
+          <option value="">Select Employee Role</option>
+          <option value="Fabricator">Fabricator</option>
+          <option value="Installer">Installer</option>
+        </select>
+        
+        <button type="submit" class="action-btn">Create Employee Account</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="create-employee.js"></script>
+</body>
+</html>

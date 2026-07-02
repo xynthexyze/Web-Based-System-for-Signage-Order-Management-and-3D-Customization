@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
+</head>
+<body>
+  <nav class="menu-tab">
+    <ul>
+      <li>
+        <a href="customer-profile.html">
+          <img src="profile.png" alt="Profile" class="menu-icon"><br><br>
+          View Profile
+        </a>
+      </li>
+      <li><a href="customer-dashboard.html" class="menu-link">Dashboard</a></li>
+      <li><a href="order-history.html" class="menu-link active">Order History</a></li>
+      <li><a href="billing.html" class="menu-link">Billing</a></li>
+      <li><a href="index.html" class="menu-link logout">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="dashboard-box">
+      <h2>Order History</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Project Type</th>
+            <th>Material</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Payment Status</th>
+            <th>Completed Date</th>
+          </tr>
+        </thead>
+        <tbody id="history-table-body">
+          <!-- Orders will be rendered here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module" src="order-history.js"></script>
+</body>
+</html>
